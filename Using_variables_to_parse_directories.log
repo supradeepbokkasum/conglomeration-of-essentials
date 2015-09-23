@@ -1,0 +1,5 @@
+# using variables to parse through different folder structures
+#Note the %02g will append 0 for single digit numbers
+#Note 23 is the upper limit, can be changed to any number
+#Can be nested within another block, if needed.
+for i in `seq -f'%02g' 1 23`; do echo $i; zcat $i/<path> | awk <logic>; done
