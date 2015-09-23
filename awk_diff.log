@@ -1,0 +1,4 @@
+ awk  '
+    NR == 1{old = $1; next}     # if 1st line 
+    {if(($1 - old) > 1000000) {print old, $1}; old = $1}  # else...
+' 
